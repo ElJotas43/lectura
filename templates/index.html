@@ -6,34 +6,34 @@
 <style>
 	#tabla{border-collapse:collapse;
 		}
-	#q1,#q2,#q3,#q4{	/*Varios id con mismas características*/
+	#q1,#q2,#q3,#q4{	
 		width:100px;
 		height:100px;
 		border:1px solid black;
 		text-align:center;
 		}
-	#q1{background-color:	/*Cuadrante 1*/
+	#q1{background-color:	
 		{% if ejeX > 0 and ejeY > 0 %}
 			lightblue;
 		{% else %}
 			gray;
 		{% endif %}
 		}
-	#q2{background-color:	/*Cuadrante 2*/
+	#q2{background-color:	
 		{% if ejeX > 0 and ejeY < 0 %}
 			lightblue;
 		{% else %}
 			gray;
 		{% endif %}
 		}
-	#q3{background-color:	/*Cuadrante 3*/
+	#q3{background-color:	
 		{% if ejeX < 0 and ejeY > 0 %}
 			lightblue;
 		{% else %}
 			gray;
 		{% endif %}
 		}
-	#q4{background-color:	/*Cuadrante 4*/
+	#q4{background-color:	
 		{% if ejeX < 0 and ejeY < 0 %}
 			lightblue;
 		{% else %}
