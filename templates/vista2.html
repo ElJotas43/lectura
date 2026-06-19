@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta http-equiv="refresh" content="2">
+
+<style>
+
+#tabla{
+border-collapse:collapse;
+margin:auto;
+}
+
+#norte,#sur,#este,#oeste,#centro{
+width:100px;
+height:100px;
+border:1px solid black;
+text-align:center;
+}
+
+#norte{
+background-color:
+{% if ejeY > 0 %}
+lightgreen
+{% else %}
+gray
+{% endif %}
+;
+}
+
+#sur{
+background-color:
+{% if ejeY < 0 %}
+lightgreen
+{% else %}
+gray
+{% endif %}
+;
+}
+
+#este{
+background-color:
+{% if ejeX > 0 %}
+lightgreen
+{% else %}
+gray
+{% endif %}
+;
+}
+
+#oeste{
+background-color:
+{% if ejeX < 0 %}
+lightgreen
+{% else %}
+gray
+{% endif %}
+;
+}
+
+#centro{
+background-color:white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Radar XY</h1>
+
+<a href="/">Inicio</a>
+<a href="/vista3">Mapa</a>
+
+<p>X = {{ ejeX }}</p>
+<p>Y = {{ ejeY }}</p>
+
+<table id="tabla">
+
+<tr>
+<td></td>
+<td id="norte">NORTE</td>
+<td></td>
+</tr>
+
+<tr>
+<td id="oeste">OESTE</td>
+<td id="centro">CENTRO</td>
+<td id="este">ESTE</td>
+</tr>
+
+<tr>
+<td></td>
+<td id="sur">SUR</td>
+<td></td>
+</tr>
+
+</table>
+
+</body>
+</html>
